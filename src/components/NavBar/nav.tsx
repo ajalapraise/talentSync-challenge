@@ -21,7 +21,7 @@ const Navbar = () => {
                             fill
                         />
                     </div>
-                    <div className="text-black font-bold">
+                    <div className="text-black font-bold hover:text-grey4">
                         <h1>ClearLink.</h1>
                     </div>
                 </Link>
@@ -29,26 +29,26 @@ const Navbar = () => {
                 <div className={`flex text-grey1 text-base font-bold  justify-around items-center`}>
                     <Link
                         href="#"
-                        className={`hover:text-grey w-[100px] flex justify-center items-center `}
+                        className={`hover:text-grey4 w-[100px] flex justify-center items-center `}
                     >
                         Products <SlArrowDown className={` text-[10px] ml-1`} />
 
                     </Link>
                     <Link
                         href="#"
-                        className={`hover:text-grey w-[100px] flex justify-center items-center `}
+                        className={`hover:text-grey4 w-[100px] flex justify-center items-center `}
                     >
                         Solutions <SlArrowDown className={` text-[10px] ml-1`} />
                     </Link>
                     <Link
                         href="#"
-                        className={`hover:text-grey w-[100px] flex justify-center items-center `}
+                        className={`hover:text-grey4  w-[100px] flex justify-center items-center `}
                     >
                         Resources <SlArrowDown className={` text-[10px] ml-1`} />
                     </Link>
                     <Link
                         href="#"
-                        className={`hover:text-grey w-[100px] flex justify-center items-center `}
+                        className={`hover:text-grey4 w-[100px] flex justify-center items-center `}
                     >
                         Pricing <SlArrowDown className={` text-[10px] ml-1`} />
                     </Link>

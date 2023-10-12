@@ -1,5 +1,5 @@
 import Navbar from "@/components/NavBar/nav";
-import { Herosection } from "@/components/landingPage/LandingPage";
+import { Advantages, Herosection, Sponsors } from "@/components/landingPage/LandingPage";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -16,6 +16,8 @@ const Home = () => {
 
       <main className={`min-h-screen `}>
         <Herosection />
+        <Sponsors />
+        <Advantages />
 
       </main>
       {/* <Footer /> */}
