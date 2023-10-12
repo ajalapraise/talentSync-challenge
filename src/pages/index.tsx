@@ -1,6 +1,9 @@
 import Navbar from "@/components/NavBar/nav";
+import { Herosection } from "@/components/landingPage/LandingPage";
 import Head from "next/head";
 import Image from "next/image";
+
+
 
 
 const Home = () => {
@@ -12,6 +15,7 @@ const Home = () => {
       <Navbar />
 
       <main className={`min-h-screen `}>
+        <Herosection />
 
       </main>
       {/* <Footer /> */}
