@@ -53,7 +53,7 @@ export const Herosection = () => {
                     <h2 className='font-bold text-grey1 text-base w-4/5'>Experience the future of communication with ClearLink – where crystal-clear video conferencing meets <br /> unparalleled simplicity.</h2>
                 </div>
                 <div className='flex items-center space-x-5'>
-                    <div className={`flex w-[150px] h-[55px] justify-center items-center text-white rounded-full hover:bg-blue2 bg-blue `}>
+                    <div className={`flex w-[160px] h-[50px] p-1 justify-center items-center text-white rounded-full hover:bg-blue2 bg-blue `}>
                         <Link href="#">
                             <Button btnValue="Start your free trial" className='' />
                         </Link>

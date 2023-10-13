@@ -12,7 +12,7 @@ export const Button: React.FC<ButtonProps> = ({ btnValue, className }) => {
       <input
         type="button"
         value={btnValue}
-        className={` text-[12px]  cursor-pointer w-[100px] h-[35px] font-bold   py-1 px-2 text-center justify-center items-center `}
+        className={` text-[12px]  cursor-pointer w-[120px] h-[35px] font-bold   py-1 px-2 text-center justify-center items-center `}
       />
     </div>
   );
