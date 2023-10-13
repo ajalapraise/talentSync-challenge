@@ -41,8 +41,13 @@ import { FAQData, FAQlayout } from '../FAQDetails/FAQData';
 
 export const Herosection = () => {
     return (
-        <div className=' px-24 mt-20 flex justify-between'>
-            <div className='w-1/2 flex flex-col space-y-5'>
+        <div className=' px-24 mt-20 flex relative justify-between'>
+            <div className='absolute top-[-5rem] z-0'>
+                <div className='relative w-[1000px] h-[600px]'>
+                    <Image src={bkgSvg} fill alt="hero" />
+                </div>
+            </div>
+            <div className='w-1/2 flex flex-col space-y-5 z-50'>
                 <div className='flex flex-col space-y-2'>
                     <h1 className={`text-black font-extrabold text-[50px] leading-[4rem]`}>Uniting the world, <br />one video call at a time</h1>
                     <h2 className='font-bold text-grey1 text-base w-4/5'>Experience the future of communication with ClearLink – where crystal-clear video conferencing meets <br /> unparalleled simplicity.</h2>
@@ -119,7 +124,7 @@ export const Herosection = () => {
                     </div>
                 </div>
 
-                <div className='flex w-full justify-center items-center '>
+                <div className='flex w-full justify-center items-center z-50 '>
                     <div className='flex w-4/6 justify-between items-center'>
                         <div className={`text-[#B2DDFF] text-[15px] border-[1px] p-1 flex justify-center items-center hover:bg-blue2 bg-white w-[30px] h-[30px] rounded-full`}>
                             <BiMicrophone />
