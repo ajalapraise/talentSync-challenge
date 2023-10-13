@@ -1,5 +1,5 @@
 import Navbar from "@/components/NavBar/nav";
-import { Advantages, Herosection, Showcase, Sponsors } from "@/components/landingPage/LandingPage";
+import { Advantages, Faq, Freetrial, Herosection, Showcase, Sponsors } from "@/components/landingPage/LandingPage";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -16,11 +16,13 @@ const Home = () => {
         <Navbar />
       </div>
 
-      <main className={`min-h-screen space-y-32 `}>
+      <main className={`min-h-screen space-y-28 `}>
         <Herosection />
         <Sponsors />
         <Advantages />
         <Showcase />
+        <Faq />
+        <Freetrial />
 
       </main>
       {/* <Footer /> */}

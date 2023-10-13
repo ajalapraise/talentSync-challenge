@@ -56,7 +56,7 @@ const Navbar = () => {
                 </div>
 
                 <div className=" flex justify-around items-center space-x-5">
-                    <div className={`flex  items-center rounded-full text-black bg-white hover:bg-blue2 hover:text-white `}>
+                    <div className={`flex  items-center rounded-full text-black bg-white border-[#98A2B3] border-[1px] hover:bg-blue2 hover:text-white `}>
                         <Link href="#">
                             <Button btnValue="Talk to sales" />
                         </Link>

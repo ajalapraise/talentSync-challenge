@@ -22,6 +22,7 @@ import arrow from '../../../public/Hand-drawn arrow.svg';
 import bkgSvg from '../../../public/Background pattern.svg';
 import ladyAvatar from '../../../public/ladyAvatar.png';
 import gallery from '../../../public/gallery.png';
+import man from '../../../public/manOnaVideoCall.png'
 
 //icons
 import { BiMicrophone } from 'react-icons/bi';
@@ -29,8 +30,9 @@ import { FiMonitor, FiMessageCircle, FiSettings } from 'react-icons/fi';
 import { BsEmojiSmile, BsSoundwave, BsCalendar } from 'react-icons/bs';
 import { RiRobot2Line } from 'react-icons/ri';
 import { FaVideo } from 'react-icons/fa';
-import { AiFillStar, AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
+import { AiFillStar, AiOutlineArrowLeft, AiOutlineArrowRight, AiOutlineCheckCircle } from 'react-icons/ai'
 import { LiaUnlockAltSolid } from 'react-icons/lia'
+import { FAQData, FAQlayout } from '../FAQDetails/FAQData';
 
 
 
@@ -308,7 +310,70 @@ export const Showcase = () => {
 
 export const Faq = () => {
     return (
-        <div>
+        <div className='w-full flex px-24 justify-between bg-transparent '>
+            <div className='w-1/2'>
+                <h2 className='text-base text-blue font-bold tracking-wider'>Support</h2>
+                <h1 className='font-extrabold text-2xl'>FAQs</h1>
+                <p className='font-light w-4/5 text-sm text-[#667085]'>Everything you need to know about the product and billing. Can’t find the answer you’re looking for? Please <span>chat to our friendly team</span>.</p>
+            </div>
+            <div className='w-1/2 p-3 flex justify-center'>
+                <div className={` flex flex-col space-y-1 `}>
+                    {FAQData.map((item, id) => (
+                        <div key={id} className={` p-2`}>
+                            <FAQlayout question={item.question} answer={item.answer} id={0} />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export const Freetrial = () => {
+    return (
+        <div className='w-full flex pl-24 py-14 justify-between  items-center'>
+            <div className='w-[500px] flex justify-start'>
+                <div className='w-[400px] flex flex-col space-y-10'>
+                    <div className='w-full text-xl font-extrabold'>
+                        <h1>Ready to clear the path to perfect communication?</h1>
+                    </div>
+                    <div className='flex justify-start items-start flex-col space-y-5'>
+                        <div className='flex justify-start items-center space-x-2'>
+                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm`} />
+                            <h2 className='text-base'>30 days free trial</h2>
+                        </div>
+                        <div className='flex justify-start items-center space-x-2'>
+                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm`} />
+                            <h2 className='text-base'>Cancel at any time</h2>
+                        </div>
+                        <div className='flex justify-start items-center space-x-2'>
+                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm`} />
+                            <h2 className='text-base'>Access to all features</h2>
+                        </div>
+                        <div className='flex justify-start items-center space-x-2'>
+                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm`} />
+                            <h2 className='text-base'>Peronalized onboarding</h2>
+                        </div>
+                    </div>
+                    <div className=" flex justify-start items-center space-x-5">
+                        <div className={`flex  items-center rounded-full text-black bg-white border-[#98A2B3] border-[1px] hover:bg-blue2 hover:text-white `}>
+                            <Link href="#">
+                                <Button btnValue="Talk to sales" />
+                            </Link>
+                        </div>
+                        <div className={`flex  items-center text-white rounded-full hover:bg-blue2 bg-blue `}>
+                            <Link href="#">
+                                <Button btnValue="Sign up for free" />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='w-[700px] flex justify-start'>
+                <div className='relative w-[700px] h-[420px] rounded-tl-lg border-t-8 border-l-8 border-[black]'>
+                    <Image src={man} fill alt="hero" />
+                </div>
+            </div>
         </div>
     )
 }
