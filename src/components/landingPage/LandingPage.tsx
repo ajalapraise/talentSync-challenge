@@ -1,5 +1,4 @@
 import React from 'react'
-import { Roboto } from 'next/font/google';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../Button/Button';
@@ -21,20 +20,15 @@ import imgCol from '../../../public/image-collection.png';
 
 import { BiMicrophone } from 'react-icons/bi';
 import { FiMonitor, FiMessageCircle, FiSettings } from 'react-icons/fi';
-import { BsEmojiSmile } from 'react-icons/bs';
+import { BsEmojiSmile, BsSoundwave, BsCalendar } from 'react-icons/bs';
 import { RiRobot2Line } from 'react-icons/ri';
 import { FaVideo } from 'react-icons/fa';
 import { AiFillStar } from 'react-icons/ai'
+import { LiaUnlockAltSolid } from 'react-icons/lia'
 
 
 
 
-const roboto = Roboto({
-    variable: "--Montserrat",
-    subsets: ["latin"],
-    display: "swap",
-    weight: "500",
-});
 
 
 export const Herosection = () => {
@@ -42,7 +36,7 @@ export const Herosection = () => {
         <div className=' px-3 mt-20 flex justify-between'>
             <div className='w-1/2 flex flex-col space-y-5'>
                 <div className='flex flex-col space-y-2'>
-                    <h1 className={`text-black font-extrabold text-[50px] leading-[4rem] ${roboto.className}`}>Uniting the world, <br />one video call at a time</h1>
+                    <h1 className={`text-black font-extrabold text-[50px] leading-[4rem]`}>Uniting the world, <br />one video call at a time</h1>
                     <h2 className='font-bold text-grey1 text-base w-4/5'>Experience the future of communication with ClearLink – where crystal-clear video conferencing meets <br /> unparalleled simplicity.</h2>
                 </div>
                 <div className='flex items-center space-x-5'>
@@ -56,7 +50,7 @@ export const Herosection = () => {
                             <h1><RiRobot2Line /></h1>
                         </div>
                         <div>
-                            <h1 className={`${roboto.className} font-light text-blue text-sm`}>Discover AI assistant</h1>
+                            <h1 className={`font-light text-blue text-sm`}>Discover AI assistant</h1>
                         </div>
                     </div>
                 </div>
@@ -181,62 +175,64 @@ export const Sponsors = () => {
 
 export const Advantages = () => {
     return (
-        <div className='mt-32 '>
-            <div>
-                <h2>The ClearLink Advantage</h2>
-                <h1>Why choose ClearLink?</h1>
-                <h3>In a world where connection is everything, ClearLink takes the lead. Our cutting-edge video conferencing app offers:</h3>
+        <div className='mt-32  space-y-16'>
+            <div className='space-y-1'>
+                <h2 className='font-extrabold text-blue text-base'>The ClearLink Advantage</h2>
+                <h1 className='font-extrabold text-[37px]'>Why choose ClearLink?</h1>
+                <h3 className='w-[550px]'>In a world where connection is everything, ClearLink takes the lead. Our cutting-edge video conferencing app offers:</h3>
             </div>
             <div className='flex w-full justify-between items-center'>
-                <div className='w-[650px] flex flex-wrap justify-between items-center'>
-                    <div className='w-1/2 justify-center h-[150px] '>
+                <div className='w-[600px] flex flex-wrap justify-between items-center'>
+                    <div className='w-1/2 justify-center h-[160px] '>
                         <div className='w-[300px] h-[140px] flex flex-col'>
-                            <div className={`text-[#B2DDFF] text-[12px] border-[1px] p-1 flex justify-center items-center hover:bg-blue2 bg-white w-[30px] h-[30px] rounded-full`}>
-                                <FaVideo />
+                            <div className='mb-3'>
+                                <div className={`text-[#175CD3] text-[12px] border-[1px] border-[#EAECF0] p-1 flex justify-center items-center hover:bg-blue2 bg-[#F9FAFB] w-[30px] h-[30px] rounded-full`}>
+                                    <FaVideo />
+                                </div>
                             </div>
-                            <div>
-                                <h1>Crystal-clear HD video</h1>
-                                <p>No more pixelation or blurriness – just stunning, lifelike clarity that brings your team closer in meetings.</p>
+                            <div className='space-y-2'>
+                                <h1 className='font-bold tracking-wider text-[16px]'>Crystal-clear HD video</h1>
+                                <p className='text-base w-[280px]'>No more pixelation or blurriness – just stunning, lifelike clarity that brings your team closer in meetings.</p>
                             </div>
                         </div>
                     </div>
-                    <div className='w-1/2 justify-center h-[150px] '>
-                        <div className='w-[300px] h-[140px] flex flex-col'>
-                            <div className={`text-[#B2DDFF] text-[12px] border-[1px] p-1 flex justify-center items-center hover:bg-blue2 bg-white w-[30px] h-[30px] rounded-full`}>
-                                <FaVideo />
-                            </div>
-                            <div>
-                                <h1>Crystal-clear HD video</h1>
-                                <p>No more pixelation or blurriness – just stunning, lifelike clarity that brings your team closer in meetings.</p>
+                    <div className='w-[300px] h-[160px] flex flex-col'>
+                        <div className='mb-3'>
+                            <div className={`text-[#175CD3] text-[12px] border-[1px] border-[#EAECF0] p-1 flex justify-center items-center hover:bg-blue2 bg-[#F9FAFB] w-[30px] h-[30px] rounded-full`}>
+                                <BsSoundwave />
                             </div>
                         </div>
-                    </div>
-                    <div className='w-1/2 justify-center h-[150px] '>
-                        <div className='w-[300px] h-[140px] flex flex-col'>
-                            <div className={`text-[#B2DDFF] text-[12px] border-[1px] p-1 flex justify-center items-center hover:bg-blue2 bg-white w-[30px] h-[30px] rounded-full`}>
-                                <FaVideo />
-                            </div>
-                            <div>
-                                <h1>Crystal-clear HD video</h1>
-                                <p>No more pixelation or blurriness – just stunning, lifelike clarity that brings your team closer in meetings.</p>
-                            </div>
+                        <div className='space-y-2'>
+                            <h1 className='font-bold tracking-wider text-[16px]'>Noise-canceling audio</h1>
+                            <p className='text-base w-[280px]'>Say goodbye to distractions with our advanced audio tech for crisp, interruption-free conversations.</p>
                         </div>
                     </div>
-                    <div className='w-1/2 justify-center h-[150px] '>
-                        <div className='w-[300px] h-[140px] flex flex-col'>
-                            <div className={`text-[#B2DDFF] text-[12px] border-[1px] p-1 flex justify-center items-center hover:bg-blue2 bg-white w-[30px] h-[30px] rounded-full`}>
-                                <FaVideo />
+                    <div className='w-[300px] h-[160px] flex flex-col'>
+                        <div className='mb-3'>
+                            <div className={`text-[#175CD3] text-[12px] border-[1px] border-[#EAECF0] p-1 flex justify-center items-center hover:bg-blue2 bg-[#F9FAFB] w-[30px] h-[30px] rounded-full`}>
+                                <BsCalendar />
                             </div>
-                            <div>
-                                <h1>Crystal-clear HD video</h1>
-                                <p>No more pixelation or blurriness – just stunning, lifelike clarity that brings your team closer in meetings.</p>
+                        </div>
+                        <div className='space-y-2'>
+                            <h1 className='font-bold tracking-wider text-[16px]'>Scheduling made easy</h1>
+                            <p className='text-base w-[280px]'>{`Streamline your agenda with ClearLink's intuitive scheduling. Set up meetings, send invitations, and receive reminders in one place.`}</p>
+                        </div>
+                    </div>
+                    <div className='w-[300px] h-[160px] flex flex-col'>
+                        <div className='mb-3'>
+                            <div className={`text-[#175CD3] text-[14px] border-[1px] border-[#EAECF0] p-1 flex justify-center items-center hover:bg-blue2 bg-[#F9FAFB] w-[30px] h-[30px] rounded-full`}>
+                                <LiaUnlockAltSolid />
                             </div>
+                        </div>
+                        <div className='space-y-2'>
+                            <h1 className='font-bold tracking-wider text-[16px]'>Bank-grade security</h1>
+                            <p className='text-base w-[280px]'>Your privacy is our priority with bank-grade security protocols safeguarding your meetings and data from unwanted intruders.</p>
                         </div>
                     </div>
                 </div>
 
-                <div className='w-[400px] flex justify-center items-center'>
-                    <div className='relative w-[380px] h-[300px]'>
+                <div className='w-[450px] flex justify-center items-center'>
+                    <div className='relative w-[400px] h-[340px]'>
                         <Image src={imgCol} fill alt="hero" />
                     </div>
 
