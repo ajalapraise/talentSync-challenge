@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/NavBar/nav";
 import { Advantages, Faq, Freetrial, Herosection, Showcase, Sponsors } from "@/components/landingPage/LandingPage";
 import Head from "next/head";
@@ -15,7 +16,6 @@ const Home = () => {
       <div className="px-24 ">
         <Navbar />
       </div>
-
       <main className={`min-h-screen space-y-28 `}>
         <Herosection />
         <Sponsors />
@@ -23,9 +23,8 @@ const Home = () => {
         <Showcase />
         <Faq />
         <Freetrial />
-
       </main>
-      {/* <Footer /> */}
+      <Footer />
 
     </div>
   );
