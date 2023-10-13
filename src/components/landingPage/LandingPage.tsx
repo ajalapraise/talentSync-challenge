@@ -39,7 +39,7 @@ import { LiaUnlockAltSolid } from 'react-icons/lia'
 
 export const Herosection = () => {
     return (
-        <div className=' px-3 mt-20 flex justify-between'>
+        <div className=' px-24 mt-20 flex justify-between'>
             <div className='w-1/2 flex flex-col space-y-5'>
                 <div className='flex flex-col space-y-2'>
                     <h1 className={`text-black font-extrabold text-[50px] leading-[4rem]`}>Uniting the world, <br />one video call at a time</h1>
@@ -149,7 +149,7 @@ export const Herosection = () => {
 
 export const Sponsors = () => {
     return (
-        <div className='w-full flex flex-coljustify-center items-center space-y-9'>
+        <div className='w-full px-24 flex flex-col justify-center items-center space-y-9'>
             <div className='font-bold text-grey'>
                 <h1>Join 1,500+ companies already video conferencing the ClearLink way</h1>
             </div>
@@ -181,7 +181,7 @@ export const Sponsors = () => {
 
 export const Advantages = () => {
     return (
-        <div className='relative space-y-16'>
+        <div className='relative px-24 space-y-16'>
             <div className='space-y-1'>
                 <h2 className='font-extrabold text-blue text-base'>The ClearLink Advantage</h2>
                 <h1 className='font-extrabold text-[37px]'>Why choose ClearLink?</h1>
@@ -243,8 +243,8 @@ export const Advantages = () => {
                     </div>
                 </div>
             </div>
-            <div className='absolute right-[10rem] top-[-6.7rem]'>
-                <div className='relative w-[250px] h-[300px]'>
+            <div className='absolute right-[16.4rem] top-[-6rem]'>
+                <div className='relative w-[230px] h-[300px]'>
                     <Image src={arrow} fill alt="hero" />
                 </div>
             </div>
@@ -255,7 +255,7 @@ export const Advantages = () => {
 
 export const Showcase = () => {
     return (
-        <div className='w-full flex justify-between items-center'>
+        <div className='w-full flex px-24 py-14 justify-between bg-[#F9FAFB] items-center'>
             <div className='w-[500px] space-y-10'>
                 <div className='relative w-[80px] h-[20px] flex items-center justify-center cursor-pointer'>
                     <Image src={shopify} fill alt="hero" />
@@ -272,7 +272,7 @@ export const Showcase = () => {
                         <p className='text-xl font-extrabold leading-normal'>ClearLink has upgraded our remote meetings. High-quality video, screen sharing, and top-notch security make it essential for our team.</p>
                     </div>
                 </div>
-                <div>
+                <div className='w-full flex justify-between items-center'>
                     <div className='flex justify-start space-x-3 items-center h-[50px]'>
                         <div className='w-[35px] h-[35px] relative'>
                             <Image src={ladyAvatar} fill alt="hero" />
@@ -282,9 +282,12 @@ export const Showcase = () => {
                             <h2 className='text-[10px] font-normal'>Project Manager, Shopify</h2>
                         </div>
                     </div>
-                    <div>
-                        <div>
+                    <div className='flex space-x-5 justify-start items-center'>
+                        <div className='text-blue hover:bg-blue2 hover:text-white flex justify-center items-center w-[35px] h-[35px] bg-transparent border-[1px] border-[#D1E9FF] rounded-full'>
                             <h1><AiOutlineArrowLeft /></h1>
+                        </div>
+                        <div className='text-blue hover:bg-blue2 hover:text-white flex justify-center items-center w-[35px] h-[35px] bg-transparent border-[1px] border-[#D1E9FF] rounded-full'>
+                            <h1><AiOutlineArrowRight /></h1>
                         </div>
 
                     </div>
@@ -293,12 +296,19 @@ export const Showcase = () => {
 
 
             <div className='w-[500px] h-[400px] flex justify-center items-center'>
-                <div className='w-[400px] h-[350px] relative'>
+                <div className='w-[400px] h-[350px] relative hover:w-[405px] hover:h-[355px]'>
                     <Image src={gallery} fill alt="hero" />
                 </div>
             </div>
 
         </div>
 
+    )
+}
+
+export const Faq = () => {
+    return (
+        <div>
+        </div>
     )
 }

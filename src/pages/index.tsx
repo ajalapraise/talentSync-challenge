@@ -8,11 +8,13 @@ import Image from "next/image";
 
 const Home = () => {
   return (
-    <div className="px-24 py-10 ">
+    <div className=" py-10 ">
       <Head>
         <title>ClearLink | HomePage </title>
       </Head>
-      <Navbar />
+      <div className="px-24 ">
+        <Navbar />
+      </div>
 
       <main className={`min-h-screen space-y-32 `}>
         <Herosection />
