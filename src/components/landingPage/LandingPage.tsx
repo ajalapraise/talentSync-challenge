@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../Button/Button';
+import { gsap } from 'gsap'
+
 
 //images andd svgs
 import avatar from '../../../public/Avatar.png';
@@ -35,6 +37,7 @@ import { LiaUnlockAltSolid } from 'react-icons/lia'
 import { FAQData, FAQlayout } from '../FAQDetails/FAQData';
 
 
+var main = gsap.timeline();
 
 
 
@@ -153,7 +156,6 @@ export const Herosection = () => {
     )
 }
 
-
 export const Sponsors = () => {
     return (
         <div className='w-full px-24 flex flex-col justify-center items-center space-y-9'>
@@ -187,6 +189,11 @@ export const Sponsors = () => {
 }
 
 export const Advantages = () => {
+    useEffect(() => {
+        main.fromTo(".arrow", { duration: 2, opacity: 0, scale: 0.3, ease: "back", x: 400, delay: .5 }, { duration: 1.5, opacity: 1, scale: 1, ease: "back", x: 0, delay: .5 });
+    }, []);
+
+
     return (
         <div className='relative px-24 space-y-16'>
             <div className='space-y-1'>
@@ -250,8 +257,8 @@ export const Advantages = () => {
                     </div>
                 </div>
             </div>
-            <div className='absolute right-[16.4rem] top-[-6rem]'>
-                <div className='relative w-[230px] h-[300px]'>
+            <div className='absolute arrow right-[16.4rem] top-[-6rem]'>
+                <div className='relative  w-[230px] h-[300px]'>
                     <Image src={arrow} fill alt="hero" />
                 </div>
             </div>
@@ -314,6 +321,10 @@ export const Showcase = () => {
 }
 
 export const Faq = () => {
+    useEffect(() => {
+        main.fromTo(".faq", { duration: 1.5, opacity: 0, scale: 0.3, ease: "back", y: -100, rotate: 180, delay: .5, stagger: 0.5 }, { opacity: 1, scale: 1, ease: "back", y: 0, rotate: 0, delay: .5, stagger: 0.5 });
+
+    }, []);
     return (
         <div className='w-full flex px-24 justify-between bg-transparent '>
             <div className='w-1/2'>
@@ -322,9 +333,9 @@ export const Faq = () => {
                 <p className='font-light w-4/5 text-sm text-[#667085]'>Everything you need to know about the product and billing. Can’t find the answer you’re looking for? Please <span>chat to our friendly team</span>.</p>
             </div>
             <div className='w-1/2 p-3 flex justify-center'>
-                <div className={` flex flex-col space-y-1 `}>
+                <div className={` flex flex-col  space-y-1 `}>
                     {FAQData.map((item, id) => (
-                        <div key={id} className={` p-2`}>
+                        <div key={id} className={`faq p-2`}>
                             <FAQlayout question={item.question} answer={item.answer} id={0} />
                         </div>
                     ))}
@@ -335,6 +346,11 @@ export const Faq = () => {
 }
 
 export const Freetrial = () => {
+    useEffect(() => {
+        main.from(".check", { duration: 1.5, opacity: 0, scale: 0.3, ease: "back", x: -100, rotate: 180, delay: .5, stagger: 0.5 });
+
+    }, []);
+
     return (
         <div className='w-full flex pl-24 py-14 justify-between  items-center'>
             <div className='w-[500px] flex justify-start'>
@@ -344,19 +360,19 @@ export const Freetrial = () => {
                     </div>
                     <div className='flex justify-start items-start flex-col space-y-5'>
                         <div className='flex justify-start items-center space-x-2'>
-                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm`} />
+                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm check`} />
                             <h2 className='text-base'>30 days free trial</h2>
                         </div>
                         <div className='flex justify-start items-center space-x-2'>
-                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm`} />
+                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm check`} />
                             <h2 className='text-base'>Cancel at any time</h2>
                         </div>
                         <div className='flex justify-start items-center space-x-2'>
-                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm`} />
+                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm check`} />
                             <h2 className='text-base'>Access to all features</h2>
                         </div>
                         <div className='flex justify-start items-center space-x-2'>
-                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm`} />
+                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm check`} />
                             <h2 className='text-base'>Peronalized onboarding</h2>
                         </div>
                     </div>
