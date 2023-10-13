@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../Button/Button';
 
+//images andd svgs
 import avatar from '../../../public/Avatar.png';
 import animoji1 from '../../../public/animoji1.png';
 import animoji2 from '../../../public/animoji2.png';
@@ -17,13 +18,18 @@ import intercom from '../../../public/Intercom.svg';
 import marvel from '../../../public/Marvel.svg';
 import automattic from '../../../public/Automattic.svg';
 import imgCol from '../../../public/image-collection.png';
+import arrow from '../../../public/Hand-drawn arrow.svg';
+import bkgSvg from '../../../public/Background pattern.svg';
+import ladyAvatar from '../../../public/ladyAvatar.png';
+import gallery from '../../../public/gallery.png';
 
+//icons
 import { BiMicrophone } from 'react-icons/bi';
 import { FiMonitor, FiMessageCircle, FiSettings } from 'react-icons/fi';
 import { BsEmojiSmile, BsSoundwave, BsCalendar } from 'react-icons/bs';
 import { RiRobot2Line } from 'react-icons/ri';
 import { FaVideo } from 'react-icons/fa';
-import { AiFillStar } from 'react-icons/ai'
+import { AiFillStar, AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { LiaUnlockAltSolid } from 'react-icons/lia'
 
 
@@ -143,7 +149,7 @@ export const Herosection = () => {
 
 export const Sponsors = () => {
     return (
-        <div className='w-full flex flex-col mt-32 justify-center items-center space-y-9'>
+        <div className='w-full flex flex-coljustify-center items-center space-y-9'>
             <div className='font-bold text-grey'>
                 <h1>Join 1,500+ companies already video conferencing the ClearLink way</h1>
             </div>
@@ -175,11 +181,11 @@ export const Sponsors = () => {
 
 export const Advantages = () => {
     return (
-        <div className='mt-32  space-y-16'>
+        <div className='relative space-y-16'>
             <div className='space-y-1'>
                 <h2 className='font-extrabold text-blue text-base'>The ClearLink Advantage</h2>
                 <h1 className='font-extrabold text-[37px]'>Why choose ClearLink?</h1>
-                <h3 className='w-[550px]'>In a world where connection is everything, ClearLink takes the lead. Our cutting-edge video conferencing app offers:</h3>
+                <h3 className='w-[550px] mt-5'>In a world where connection is everything, ClearLink takes the lead. Our cutting-edge video conferencing app offers:</h3>
             </div>
             <div className='flex w-full justify-between items-center'>
                 <div className='w-[600px] flex flex-wrap justify-between items-center'>
@@ -235,11 +241,64 @@ export const Advantages = () => {
                     <div className='relative w-[400px] h-[340px]'>
                         <Image src={imgCol} fill alt="hero" />
                     </div>
-
                 </div>
-
+            </div>
+            <div className='absolute right-[10rem] top-[-6.7rem]'>
+                <div className='relative w-[250px] h-[300px]'>
+                    <Image src={arrow} fill alt="hero" />
+                </div>
             </div>
         </div >
+
+    )
+}
+
+export const Showcase = () => {
+    return (
+        <div className='w-full flex justify-between items-center'>
+            <div className='w-[500px] space-y-10'>
+                <div className='relative w-[80px] h-[20px] flex items-center justify-center cursor-pointer'>
+                    <Image src={shopify} fill alt="hero" />
+                </div>
+                <div className='space-y-10'>
+                    <div className='flex items-center'>
+                        <AiFillStar className={`text-[#FE9B07] text-[15px]`} />
+                        <AiFillStar className={`text-[#FE9B07] text-[15px]`} />
+                        <AiFillStar className={`text-[#FE9B07] text-[15px]`} />
+                        <AiFillStar className={`text-[#FE9B07] text-[15px]`} />
+                        <AiFillStar className={`text-[#FE9B07] text-[15px]`} />
+                    </div>
+                    <div>
+                        <p className='text-xl font-extrabold leading-normal'>ClearLink has upgraded our remote meetings. High-quality video, screen sharing, and top-notch security make it essential for our team.</p>
+                    </div>
+                </div>
+                <div>
+                    <div className='flex justify-start space-x-3 items-center h-[50px]'>
+                        <div className='w-[35px] h-[35px] relative'>
+                            <Image src={ladyAvatar} fill alt="hero" />
+                        </div>
+                        <div>
+                            <h1 className='text-[12px] font-bold'>Sarah Thompson</h1>
+                            <h2 className='text-[10px] font-normal'>Project Manager, Shopify</h2>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h1><AiOutlineArrowLeft /></h1>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div className='w-[500px] h-[400px] flex justify-center items-center'>
+                <div className='w-[400px] h-[350px] relative'>
+                    <Image src={gallery} fill alt="hero" />
+                </div>
+            </div>
+
+        </div>
 
     )
 }
