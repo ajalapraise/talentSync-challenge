@@ -2,8 +2,6 @@ import React, { useEffect } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../Button/Button';
-import { gsap } from 'gsap'
-
 
 //images andd svgs
 import avatar from '../../../public/Avatar.png';
@@ -35,9 +33,16 @@ import { FaVideo } from 'react-icons/fa';
 import { AiFillStar, AiOutlineArrowLeft, AiOutlineArrowRight, AiOutlineCheckCircle } from 'react-icons/ai'
 import { LiaUnlockAltSolid } from 'react-icons/lia'
 import { FAQData, FAQlayout } from '../FAQDetails/FAQData';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.config({
+    force3D: true
+
+})
 
 
-var main = gsap.timeline();
 
 
 
@@ -190,12 +195,21 @@ export const Sponsors = () => {
 
 export const Advantages = () => {
     useEffect(() => {
+        const main = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#advantage',
+                start: 'top 60%',
+                // end: 'bottom 60%',
+                toggleActions: "play none none reverse",
+            }
+        });
+
         main.fromTo(".arrow", { duration: 2, opacity: 0, scale: 0.3, ease: "back", x: 400, delay: .5 }, { duration: 1.5, opacity: 1, scale: 1, ease: "back", x: 0, delay: .5 });
     }, []);
 
 
     return (
-        <div className='relative px-24 space-y-16'>
+        <div className='relative px-24 space-y-16' id='advantage'>
             <div className='space-y-1'>
                 <h2 className='font-extrabold text-blue text-base'>The ClearLink Advantage</h2>
                 <h1 className='font-extrabold text-[37px]'>Why choose ClearLink?</h1>
@@ -269,7 +283,7 @@ export const Advantages = () => {
 
 export const Showcase = () => {
     return (
-        <div className='w-full flex px-24 py-14 justify-between bg-[#F9FAFB] items-center'>
+        <div className='w-full flex px-24 py-14 justify-between bg-[#F9FAFB] items-center' id='showcase'>
             <div className='w-[500px] space-y-10'>
                 <div className='relative w-[80px] h-[20px] flex items-center justify-center cursor-pointer'>
                     <Image src={shopify} fill alt="hero" />
@@ -322,11 +336,19 @@ export const Showcase = () => {
 
 export const Faq = () => {
     useEffect(() => {
+        const main = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#faq',
+                start: 'top 60%',
+                // end: 'bottom 60%',
+                toggleActions: "play none none reverse",
+            }
+        });
         main.fromTo(".faq", { duration: 1.5, opacity: 0, scale: 0.3, ease: "back", y: -100, rotate: 180, delay: .5, stagger: 0.5 }, { opacity: 1, scale: 1, ease: "back", y: 0, rotate: 0, delay: .5, stagger: 0.5 });
 
     }, []);
     return (
-        <div className='w-full flex px-24 justify-between bg-transparent '>
+        <div className='w-full flex px-24 justify-between bg-transparent ' id='faq'>
             <div className='w-1/2'>
                 <h2 className='text-base text-blue font-bold tracking-wider'>Support</h2>
                 <h1 className='font-extrabold text-2xl'>FAQs</h1>
@@ -347,12 +369,19 @@ export const Faq = () => {
 
 export const Freetrial = () => {
     useEffect(() => {
-        main.from(".check", { duration: 1.5, opacity: 0, scale: 0.3, ease: "back", x: -100, rotate: 180, delay: .5, stagger: 0.5 });
-
+        const main = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#trial',
+                start: 'top 60%',
+                // end: 'bottom 60%',
+                toggleActions: "play none none reverse",
+            }
+        });
+        main.fromTo(".check", { duration: 1.5, opacity: 0, scale: 0.3, ease: "back", y: -100, rotate: 180, delay: .5, stagger: 0.5 }, { opacity: 1, scale: 1, ease: "bounce.out", y: 0, rotate: 0, delay: .5, stagger: 0.7 });
     }, []);
 
     return (
-        <div className='w-full flex pl-24 py-14 justify-between  items-center'>
+        <div className='w-full flex pl-24 py-14 justify-between  items-center' id='trial'>
             <div className='w-[500px] flex justify-start'>
                 <div className='w-[400px] flex flex-col space-y-10'>
                     <div className='w-full text-xl font-extrabold'>
@@ -360,19 +389,27 @@ export const Freetrial = () => {
                     </div>
                     <div className='flex justify-start items-start flex-col space-y-5'>
                         <div className='flex justify-start items-center space-x-2'>
-                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm check`} />
+                            <div className='check'>
+                                <AiOutlineCheckCircle className={`text-[#175CD3] text-sm`} />
+                            </div>
                             <h2 className='text-base'>30 days free trial</h2>
                         </div>
                         <div className='flex justify-start items-center space-x-2'>
-                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm check`} />
+                            <div className='check'>
+                                <AiOutlineCheckCircle className={`text-[#175CD3] text-sm`} />
+                            </div>
                             <h2 className='text-base'>Cancel at any time</h2>
                         </div>
                         <div className='flex justify-start items-center space-x-2'>
-                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm check`} />
+                            <div className='check'>
+                                <AiOutlineCheckCircle className={`text-[#175CD3] text-sm`} />
+                            </div>
                             <h2 className='text-base'>Access to all features</h2>
                         </div>
                         <div className='flex justify-start items-center space-x-2'>
-                            <AiOutlineCheckCircle className={`text-[#175CD3] text-sm check`} />
+                            <div className='check'>
+                                <AiOutlineCheckCircle className={`text-[#175CD3] text-sm`} />
+                            </div>
                             <h2 className='text-base'>Peronalized onboarding</h2>
                         </div>
                     </div>
